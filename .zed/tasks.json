@@ -1,0 +1,34 @@
+[
+  {
+    "label": "Preview site (localhost:8080)",
+    "command": "open http://localhost:8080 && python3 -m http.server 8080",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  },
+  {
+    "label": "Get latest from GitHub",
+    "command": "git pull origin main",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "Show what's changed",
+    "command": "git status -s && git diff --stat",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "reveal": "always"
+  },
+  {
+    "label": "Ship to live site (commit + push)",
+    "command": "bash scripts/ship.sh",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "use_new_terminal": true,
+    "reveal": "always"
+  },
+  {
+    "label": "Open live site",
+    "command": "open https://traidesolutionswebsite.vercel.app",
+    "reveal": "never"
+  }
+]
